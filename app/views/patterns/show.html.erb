@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @pattern.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @pattern.description %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @pattern.link %>
+</p>
+
+
+<%= link_to 'Edit', edit_pattern_path(@pattern) %> |
+<%= link_to 'Back', patterns_path %>

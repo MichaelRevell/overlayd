@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  site_name: MyString
+  root_domain: MyString
+  user_id: 1
+  views: 1
+  subdomain: MyString
+
+two:
+  title: MyString
+  site_name: MyString
+  root_domain: MyString
+  user_id: 1
+  views: 1
+  subdomain: MyString

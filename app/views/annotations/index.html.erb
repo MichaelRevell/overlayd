@@ -1,0 +1,45 @@
+<h1>Listing annotations</h1>
+
+<table>
+  <tr>
+    <th>X</th>
+    <th>Y</th>
+    <th>Width</th>
+    <th>Height</th>
+    <th>Text</th>
+    <th>Title</th>
+    <th>Link</th>
+    <th>Pattern</th>
+    <th>Overlay</th>
+    <th>Page path</th>
+    <th>Page sub domain</th>
+    <th>Selector</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @annotations.each do |annotation| %>
+  <tr>
+    <td><%= annotation.x %></td>
+    <td><%= annotation.y %></td>
+    <td><%= annotation.width %></td>
+    <td><%= annotation.height %></td>
+    <td><%= annotation.text %></td>
+    <td><%= annotation.title %></td>
+    <td><%= annotation.link %></td>
+    <td><%= annotation.pattern_id %></td>
+    <td><%= annotation.overlay_id %></td>
+    <td><%= annotation.page_path %></td>
+    <td><%= annotation.page_sub_domain %></td>
+    <td><%= annotation.selector %></td>
+    <td><%= link_to 'Show', annotation %></td>
+    <td><%= link_to 'Edit', edit_annotation_path(annotation) %></td>
+    <td><%= link_to 'Destroy', annotation, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Annotation', new_annotation_path %>

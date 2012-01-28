@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>X:</b>
+  <%= @annotation.x %>
+</p>
+
+<p>
+  <b>Y:</b>
+  <%= @annotation.y %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @annotation.width %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @annotation.height %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%= @annotation.text %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @annotation.title %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @annotation.link %>
+</p>
+
+<p>
+  <b>Pattern:</b>
+  <%= @annotation.pattern_id %>
+</p>
+
+<p>
+  <b>Overlay:</b>
+  <%= @annotation.overlay_id %>
+</p>
+
+<p>
+  <b>Page path:</b>
+  <%= @annotation.page_path %>
+</p>
+
+<p>
+  <b>Page sub domain:</b>
+  <%= @annotation.page_sub_domain %>
+</p>
+
+<p>
+  <b>Selector:</b>
+  <%= @annotation.selector %>
+</p>
+
+
+<%= link_to 'Edit', edit_annotation_path(@annotation) %> |
+<%= link_to 'Back', annotations_path %>

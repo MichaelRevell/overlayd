@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @overlay.title %>
+</p>
+
+<p>
+  <b>Site name:</b>
+  <%= @overlay.site_name %>
+</p>
+
+<p>
+  <b>Root domain:</b>
+  <%= @overlay.root_domain %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @overlay.user_id %>
+</p>
+
+<p>
+  <b>Views:</b>
+  <%= @overlay.views %>
+</p>
+
+<p>
+  <b>Subdomain:</b>
+  <%= @overlay.subdomain %>
+</p>
+
+
+<%= link_to 'Edit', edit_overlay_path(@overlay) %> |
+<%= link_to 'Back', overlays_path %>
