@@ -1,14 +1,125 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Overylayd</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<!-- overlay.d-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Overylay.d</title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <!-- Overlay inner boxes stuff -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			//To switch directions up/down and left/right just place a "-" in front of the top/left attribute
+			//Vertical Sliding
+			$('.boxgrid.slidedown').hover(function(){
+				$(".cover", this).stop().animate({top:'-260px'},{queue:false,duration:300});
+			}, function() {
+				$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:300});
+			});
+			//Horizontal Sliding
+			$('.boxgrid.slideright').hover(function(){
+				$(".cover", this).stop().animate({left:'325px'},{queue:false,duration:300});
+			}, function() {
+				$(".cover", this).stop().animate({left:'0px'},{queue:false,duration:300});
+			});
+			//Diagnal Sliding
+			$('.boxgrid.thecombo').hover(function(){
+				$(".cover", this).stop().animate({top:'260px', left:'325px'},{queue:false,duration:300});
+			}, function() {
+				$(".cover", this).stop().animate({top:'0px', left:'0px'},{queue:false,duration:300});
+			});
+			//Partial Sliding (Only show some of background)
+			$('.boxgrid.peek').hover(function(){
+				$(".cover", this).stop().animate({top:'90px'},{queue:false,duration:160});
+			}, function() {
+				$(".cover", this).stop().animate({top:'0px'},{queue:false,duration:160});
+			});
+			//Full Caption Sliding (Hidden to Visible)
+			$('.boxgrid.captionfull').hover(function(){
+				$(".cover", this).stop().animate({top:'160px'},{queue:false,duration:160});
+			}, function() {
+				$(".cover", this).stop().animate({top:'260px'},{queue:false,duration:160});
+			});
+			//Caption Sliding (Partially Hidden to Visible)
+			$('.boxgrid.caption').hover(function(){
+				$(".cover", this).stop().animate({top:'230px'},{queue:false,duration:160});
+			}, function() {
+				$(".cover", this).stop().animate({top:'255px'},{queue:false,duration:160});
+			});
+
+			$(".cover", this).stop().animate({top:'255px', opacity:.8},{queue:false,duration:600});
+			
+		});
+		</script>
+    <!-- ==========================-->
+
+
+    <!-- Le styles -->
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+
+    <div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <a class="brand" href="#">overlay.d</a>
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container2">
+  <!-- Main hero unit for a primary marketing message or call to action -->
+
+      <div class="hero-unit">
+        <!--h1>Overlay.d</h1-->
+        <img src="mainlogo.png" width="450"  />
+        <p>
+        	<span >
+        		<form class="hero-subunit"><input class="input-xlarge"> <a class="btn primary large">create overlay &raquo;</a></form> 
+        	</span>
+        </p>
+
+      </div>
+    </div>
+    
+    
 <%= yield %>
 
-</body>
+		
+
+      </div>
+
+      <footer>
+        <p>&copy; overlay.d 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+
 </html>

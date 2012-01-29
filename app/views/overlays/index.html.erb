@@ -1,17 +1,38 @@
-<h1>Listing overlays</h1>
+ <div class="container">
+    <!-- Example row of columns -->
+    <% @num = 0 %>
+    <% @overlays.each do |overlay| %>
+    <% if @num %3 == 0 %>
+        <% if @num != 0 %>
+          </div> <!-- end row -->
+        <% end %>
+        <div class="row">
+    <% end %>
+    
+     <div class="span5">
+        <div class="boxgrid caption">  
+        	<a href="<%= overlay.link %>"><img src="<%= overlay.picture %>"/></a>
+        	<div class="cover boxcaption">  
+            	<h3><%= overlay.root_domain %></h3>  
+            	<p>
+                <%= overlay.root_domain %>
+                <%= link_to 'Show', overlay %>
+                <%= link_to 'Edit', edit_overlay_path(overlay) %>
+                <%= link_to 'Destroy', overlay, confirm: 'Are you sure?', method: :delete %>     
+            </p>  
+        	</div> <!-- end cover boxcaption -->
+    	</div> <!-- end boxgrid caption -->
 
-
-<% @overlays.each do |overlay| %>
-
-    <a href="<%= overlay.link %>"><div style="width: 400px; height: 200px; overflow: hidden;"><%= overlay.title %><br />
-      <img style="width: 400px" src="<%= overlay.picture %>"></div></a>
-   <%= link_to 'Show', overlay %>
-   <%= link_to 'Edit', edit_overlay_path(overlay) %>
-   <%= link_to 'Destroy', overlay, confirm: 'Are you sure?', method: :delete %>
-
-<% end %>
-</table>
+     </div> <!-- end span 5 -->
+     <% @num += 1 %>
+    <% end %>
+    <% if @num %3 != 0 %>
+      </div> <!-- end row -->
+    <% end %>
+   
 
 <br />
-
-<%= link_to 'New Overlay', new_overlay_path %>
+<div class="clear" style="margin-left: 25px;">
+  <%= link_to 'New Overlay', new_overlay_path %>
+  
+</div>
