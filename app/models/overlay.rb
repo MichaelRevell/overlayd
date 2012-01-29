@@ -2,7 +2,7 @@
 
 class Overlay < ActiveRecord::Base
   has_many :annotations
-  after_create :create_picture
+  #after_create :create_picture
   attr_accessible :title, :name, :root_domain, :views, :subdomain, :picture, :site_name
   
   def link
