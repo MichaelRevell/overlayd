@@ -9,6 +9,9 @@ class Overlay < ActiveRecord::Base
     return "http://" + root_domain + ".overlayd.org"
   end
   
+  def picture 
+    return "assets/"+@overlay.subdomain+".jpg"
+  end
   def create_picture
     # kit = IMGKit.new(html, :quality => 50)
     kit = IMGKit.new("http://" + root_domain)
