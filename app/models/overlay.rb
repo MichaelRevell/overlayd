@@ -10,7 +10,7 @@ class Overlay < ActiveRecord::Base
   end
   
   def picture 
-    return "assets/"+@overlay.subdomain+".jpg"
+    return "assets/"+subdomain+".jpg"
   end
   def create_picture
     # kit = IMGKit.new(html, :quality => 50)
