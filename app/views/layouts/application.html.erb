@@ -77,7 +77,6 @@
     
     $(window).bind("resize", function(){
       $("#dim").css("height", $(window).height());
-      $("#fuzz").css("height", $(window).height());
     });
   </script>
 
@@ -92,7 +91,6 @@
       <!-- DIM BOX STYLE -->
     <style type="text/css">
       *{ margin:0; padding:0; }
-      body { text-align: center; background: #111 url('wood.jpg'); }
 
       .cube{ width:50%; height:100%; float:left; clear:right; }
       
@@ -152,19 +150,23 @@
 
   <body>
 
+<div id="dim">
+    <div class="msgbox">
+      <div> 
+        <a class="closedim" href="#" >
+          <img src="close.png">
+        </a>
 
-    <div id="dim">
-      <div class="msgbox">
-        <div> 
-          <a class="closedim" href="#" ><img src="close.png"></a>
-          <img src="topmanifesto.png" alt="Whether you knit a nyan cat scarf , prototype a bulletproof vest made of foam, 
+      <img src="topmanifesto.png" alt="Whether you knit a nyan cat scarf , prototype a bulletproof vest made of foam, 
 or design a location base social photosharing app for your fish.overlaye.d helps you share and test your ideas and prototypes 
 throughthe power of feedback. " />
-          <div>
-        </div>
-          <iframe width="720" height="410" src="http://www.youtube.com/embed/eIrpl-lRkMU?rel=0&?version=3&autohide=1&showinfo=0&controls=0&hd=1" frameborder="0" allowfullscreen></iframe>
-        </div>
-      <img src="designlogo.png" /></div>
+
+      <div></div>
+      
+      <iframe width="720" height="410" src="http://www.youtube.com/embed/eIrpl-lRkMU?rel=0&hd=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+      <img src="designlogo.png" />
+    </div>
   </div>
 
 
