@@ -1,30 +1,14 @@
 <h1>Listing overlays</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Site name</th>
-    <th>Root domain</th>
-    <th>User</th>
-    <th>Views</th>
-    <th>Subdomain</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @overlays.each do |overlay| %>
-  <tr>
-    <td><%= link_to overlay.title, "http://" + overlay.subdomain + ".overlayd.org" %></td>
-    <td><%= overlay.site_name %></td>
-    <td><%= overlay.root_domain %></td>
-    <td><%= overlay.user_id %></td>
-    <td><%= overlay.views %></td>
-    <td><%= overlay.subdomain %></td>
-    <td><%= link_to 'Show', overlay %></td>
-    <td><%= link_to 'Edit', edit_overlay_path(overlay) %></td>
-    <td><%= link_to 'Destroy', overlay, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+
+    <a href="<%= overlay.link %>"><div style="width: 400px; height: 200px; overflow: hidden;"><%= overlay.title %><br />
+      <img style="width: 400px" src="<%= overlay.picture %>"></div></a>
+   <%= link_to 'Show', overlay %>
+   <%= link_to 'Edit', edit_overlay_path(overlay) %>
+   <%= link_to 'Destroy', overlay, confirm: 'Are you sure?', method: :delete %>
+
 <% end %>
 </table>
 

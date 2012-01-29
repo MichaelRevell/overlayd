@@ -3,6 +3,7 @@ class OverlaysController < ApplicationController
   # GET /overlays.json
   def index
     @overlays = Overlay.all
+    @kit = IMGKit.new(render_to_string)
 
     respond_to do |format|
       format.html # index.html.erb

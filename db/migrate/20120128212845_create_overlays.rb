@@ -7,7 +7,7 @@ class CreateOverlays < ActiveRecord::Migration
       t.integer :user_id
       t.integer :views
       t.string :subdomain
-      t.pic :pic
+      t.string :picture
 
       t.timestamps
     end

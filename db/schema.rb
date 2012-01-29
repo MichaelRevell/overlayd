@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20120128213002) do
     t.integer  "user_id"
     t.integer  "views"
     t.string   "subdomain"
+    t.string   "picture"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
