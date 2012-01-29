@@ -42,7 +42,8 @@ class OverlaysController < ApplicationController
   # POST /overlays.json
   def create
     @overlay = Overlay.new(params[:overlay])
-    @overlay.root_domain = @overlay.root_domain[/(?:http:\/\/)?(.+)/, 1]
+    @last = @overlay.root_domain[/(?:http:\/\/)?([^\/]+)(\/.+)?/, 2]
+    @overlay.root_domain = @overlay.root_domain[/(?:http:\/\/)?([^\/]+)(\/.+)?/, 1]
     @overlay.subdomain ||= @overlay.root_domain[/(?:http:\/\/)?([a-zA-Z0-9\-]+)/, 1].downcase
     @overlay.title ||= @overlay.root_domain
     @overlay.site_name ||= @overlay.root_domain
@@ -50,7 +51,7 @@ class OverlaysController < ApplicationController
 
     respond_to do |format|
       if @overlay.save
-        format.html { redirect_to "http://"+@overlay.root_domain[/(?:http:\/\/)?(.+)/, 1]+".overlayd.org", notice: 'Overlay was successfully created.' }
+        format.html { redirect_to "http://"+@overlay.root_domain[/(?:http:\/\/)?(.+)/, 1]+".overlayd.org"+@last, notice: 'Overlay was successfully created.' }
         format.json { render json: @overlay, status: :created, location: @overlay }
       else
         format.html { render action: "new" }
