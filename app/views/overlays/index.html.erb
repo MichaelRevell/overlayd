@@ -1,3 +1,24 @@
+  <div class="container2">
+ <!-- Main hero unit for a primary marketing message or call to action -->
+
+     <div class="hero-unit">
+       <!--h1>Overlay.d</h1-->
+       <img src="/assets/mainlogo.png" width="450"  />
+       <p>
+       	<span >
+       	  <%= form_for(@overlay) do |f| %>
+       		  <div class="hero-subunit"> <!-- was form -->
+       		      <%= f.text_field :root_domain, :class => "input-xlarge" %>
+       		    <a class="btn primary large" onclick="$('form').submit()">create overlay &raquo;</a>
+       		  </div> <!-- was form -->
+       		<% end %>
+       	</span>
+       </p>
+
+     </div>
+   </div>
+ 
+ 
  <div class="container">
     <!-- Example row of columns -->
     <% @num = 0 %>

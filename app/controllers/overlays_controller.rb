@@ -2,6 +2,7 @@ class OverlaysController < ApplicationController
   # GET /overlays
   # GET /overlays.json
   def index
+    @overlay = Overlay.new
     @overlays = Overlay.all
 
     respond_to do |format|
@@ -41,6 +42,9 @@ class OverlaysController < ApplicationController
   # POST /overlays.json
   def create
     @overlay = Overlay.new(params[:overlay])
+    @overlay.subdomain ||= @overlay.root_domain[/(?:http:\/\/)?([a-zA-Z0-9\-]+)/, 1]
+    @overlay.title ||= @overlay.root_domain
+    @overlay.site_name ||= @overlay.root_domain
     @overlay.picture = "assets/"+@overlay.subdomain+".jpg"
 
     respond_to do |format|
