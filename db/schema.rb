@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120128213002) do
+ActiveRecord::Schema.define(:version => 20120129031151) do
 
   create_table "annotations", :force => true do |t|
     t.integer  "x"
@@ -37,9 +37,9 @@ ActiveRecord::Schema.define(:version => 20120128213002) do
     t.integer  "user_id"
     t.integer  "views"
     t.string   "subdomain"
-    t.string   "picture"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "picture"
   end
 
   create_table "patterns", :force => true do |t|

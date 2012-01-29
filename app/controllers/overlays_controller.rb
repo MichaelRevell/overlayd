@@ -41,6 +41,7 @@ class OverlaysController < ApplicationController
   # POST /overlays.json
   def create
     @overlay = Overlay.new(params[:overlay])
+    @overlay.picture = "assets/"+@overlay.subdomain+".jpg"
 
     respond_to do |format|
       if @overlay.save
