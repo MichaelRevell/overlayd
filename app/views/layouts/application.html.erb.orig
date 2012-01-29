@@ -171,10 +171,17 @@ throughthe power of feedback. " />
     <div class="topbar">
       <div class="fill">
         <div class="container">
+<<<<<<< HEAD
+          <a class="brand" href="/">overlay.d</a>
+          <ul class="nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="#about">About</a></li>
+=======
           <img src="logo_main.png"/>
           <ul class="nav">
             <li class="active"><a href="#">Home</a></li>
             <li><div class="cube"><a class="alertdim" href="#" >about</a></div></li>
+>>>>>>> 8c016af2bc3fd654ef9598560c40cc0cbd404fed
 
             <li><a href="#team">Team</a></li>
           </ul>
@@ -191,7 +198,11 @@ throughthe power of feedback. " />
       </div>
 
       <footer>
+<<<<<<< HEAD
         <p>&copy; Overlay.d 2012</p>
+=======
+        <p>&copy; overlay.d 2012</p>
+>>>>>>> 8c016af2bc3fd654ef9598560c40cc0cbd404fed
       </footer>
 
     </div> <!-- /container -->
